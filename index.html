@@ -9,80 +9,131 @@
 <body id="body">
     <div id="nav" class="nav">
         <div class="nav-left">
-            <div class="nav-item">
-                <p>Home</p>
-            </div>
-            <div class="nav-item">
-                <p>About</p>
-            </div>
-            <div class="nav-item">
-                <p>Menu</p>
-            </div>
-            <div class="nav-item">
-                <p>Merch</p>
-            </div>
+            <a href="" class="link-format">
+                <div class="nav-item">
+                    <p>Home</p>
+                </div>
+            </a>
+            <a href="" class="link-format">
+                <div class="nav-item">
+                    <p>About</p>
+                </div>
+            </a>
+            <a href="" class="link-format">
+                <div class="nav-item">
+                    <p>Menu</p>
+                </div>
+            </a>
+            <a href="" class="link-format">
+                <div class="nav-item">
+                    <p>Merch</p>
+                </div>
+            </a>
         </div>
         <div id="nav-right" class="nav-right">
-            <p>Login</p>
+            <a href="" class="link-format">
+                <p>Login</p>
+            </a>
         </div>
     </div>
     <section id="sec-1" class="section-1">
         <div id="logo-container" class="logo-container">
         </div>
         <div id="text-1" class="text-1">A Japanese culinary experience like no other</div>
-        <a href="#" id="explore-button" class="explore-button">
-            <div >Explore</div>
+        <a href="#explore" id="explore-button" class="explore-button link-format">
+            <span>Explore</span>
         </a>
     </section>
-    <!-- <section class="section-2">
-        <div class="logo-container">
+    <section id="sec-2" class="section-2">
+        <div class="menu-container"> 
+            <div class="menu-nav">
+                <a href="" class="link-format">
+                    <div class="menu-nav-item">Non-Alcoholic</div>
+                </a>
+                <a href="" class="link-format">
+                    <div class="menu-nav-item">Tea</div>
+                </a>
+                <a href="" class="link-format">
+                    <div class="menu-nav-item">Noodles</div>
+                </a>
+                <a href="" class="link-format">
+                    <div class="menu-nav-item">Meat Dishes</div>
+                </a>
+                <a href="" class="link-format">
+                    <div class="menu-nav-item">Desserts</div>
+                </a>
+                <a href="" class="link-format">
+                    <div class="menu-nav-item">Alcohol</div>
+                </a>
+            </div>
+            <div class="menu-overlay overlay-left"></div>
+            <div class="menu-overlay overlay-right"></div>
         </div>
-    </section> -->
+        <div class="food-menu-container">
+            <div class="food-menu-item">
+                <img src="images/udon.jpg" alt="" class="food-item-image">
+                <p class="food-item-name">Udon</p>
+            </div>
+            <div class="food-menu-item">
+                <img src="images/sencha.jpg" alt="" class="food-item-image">
+                <p class="food-item-name">Sencha</p>
+            </div>
+            <div class="food-menu-item">
+                <img src="images/chashu.jpg" alt="" class="food-item-image">
+                <p class="food-item-name">Chashu</p>
+            </div>
+            <div class="food-menu-item">
+                <img src="images/melon-soda.jpg" alt="" class="food-item-image">
+                <p class="food-item-name">Melon Soda</p>
+            </div>
+            <div class="food-menu-item">
+                <img src="images/dorayaki.jpg" alt="" class="food-item-image">
+                <p class="food-item-name">Dorayaki</p>
+            </div>
+            <div class="food-menu-item">
+                <img src="images/sake.jpg" alt="" class="food-item-image">
+                <p class="food-item-name">Sake</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
 
 <script>
     const body = document.getElementById("body");
-    const navbar = document.getElementById("nav");
-    const navRight = document.getElementById("nav-right");
-    const section1 = document.getElementById("sec-1");
     const logoContainer = document.getElementById("logo-container");
     const text1 = document.getElementById("text-1");
     const exploreBtn = document.getElementById("explore-button");
-
-window.addEventListener("scroll", function () {
-    let top = window.scrollY;
+    const section1 = document.getElementById("sec-1");
+    const section2 = document.getElementById("sec-2");
     
-    if(top >= 20) {
-        body.classList.add("sec-bg-black");
-        logoContainer.classList.add("logo-bg-white");
-        navbar.classList.add("nav-color-white");
-        navRight.classList.add("nav-right-border-white");
-    } else {
-        body.classList.remove("sec-bg-black");
-        logoContainer.classList.remove("logo-bg-white");
-        navbar.classList.remove("nav-color-white");
-        navRight.classList.remove("nav-right-border-white");
-    }
-
-    if(top >=100) {
-        logoContainer.classList.add("logo-scrolled-hidden");
-    } else {
-        logoContainer.classList.remove("logo-scrolled-hidden");
-    }
-
-    if(top >=120) {
-        text1.classList.add("text-1-scrolled");
-    } else {
-        text1.classList.remove("text-1-scrolled");
-    }
-
-    if(top >=170) {
-        exploreBtn.classList.add("text-1-scrolled");
-    } else {
-        exploreBtn.classList.remove("text-1-scrolled");
-    }
-
-
+    window.addEventListener("scroll", function () {
+        let top = window.scrollY;
+        
+        if(top >=70) {
+            logoContainer.classList.add("logo-scrolled-hidden");
+        } else {
+            logoContainer.classList.remove("logo-scrolled-hidden");
+        }
+        
+        if(top >=120) {
+            text1.classList.add("text-1-scrolled");
+        } else {
+            text1.classList.remove("text-1-scrolled");
+        }
+        
+        if(top >=170) {
+            exploreBtn.classList.add("text-1-scrolled");
+        } else {
+            exploreBtn.classList.remove("text-1-scrolled");
+        }
     });
+
+    exploreBtn.addEventListener("click", function(){
+        window.scrollTo(0,0);
+        section1.classList.add('hide-visibility');
+        section2.classList.add("section-2-visible");
+    });
+
+
 </script>

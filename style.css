@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+
+body {
+    margin: 0;
+    height: 2000px;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.nav {
+    position: fixed;
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    width: 85vw;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins';
+    transition-duration: 300ms;
+    transition-property: opacity;
+    visibility: hidden;
+}
+
+.nav, .nav-left, .nav-right {
+    display: flex;
+}
+
+.nav-left {
+    width: 24vw;
+    justify-content: space-between;
+}
+
+.nav-right {
+    height: fit-content;
+    /* border: 1px solid black; */
+    padding: 10px 30px 10px 30px;
+    border-radius: 40px;
+}
+
+.nav-right p{ 
+    margin: 0;
+}
+
+.logo-container {
+    position: fixed;
+    width: 60vw;
+    height: 200px;
+    background-color: rgb(18, 18, 18);
+    mask-image:url('web_logo_bold.svg');
+    mask-size: contain; 
+    mask-repeat: no-repeat;
+    -webkit-mask-image: url('web_logo_bold.svg');
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    transition: color 300ms ease-in;
+    animation-name: fadeIn;
+    animation-timing-function: ease-in;
+    animation-duration: 500ms;
+}
+
+.text-1 {
+    position: fixed;
+    color: rgb(219, 219, 219);
+    font-family: "Poppins";
+    font-size: xx-large;
+    opacity: 0;
+    animation-name: fadeOut;
+    animation-timing-function: ease-in;
+    animation-duration: 500ms;
+}
+
+.explore-button {
+    position: fixed;
+    margin-top: 160px;
+    padding: 10px 20px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 23em;
+    color: rgb(239, 239, 239);
+    text-decoration: none;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: x-large;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation-name: fadeOut;
+    animation-timing-function: ease-in;
+    animation-duration: 500ms;
+}
+
+/* The explore button should appear when top is 150px */
+
+/* ----------Transition classes---------- */
+
+.sec-bg-black {
+    background-color: rgb(18, 18, 18);
+}
+
+.nav-color-white {
+    color: rgb(219, 219, 219);
+    visibility: visible;
+    
+}
+
+.nav-item {
+    height: fit-content;
+    cursor: pointer;
+}
+
+.nav-item p {
+    margin: 0;
+}
+
+.nav-item:hover {
+    border-bottom: 1px solid rgb(219, 219, 219);
+    padding-bottom: 4px;
+}
+
+.logo-bg-white {
+    background-color: rgb(219, 219, 219);
+}
+
+.logo-scrolled-hidden {
+    animation-name: fadeOut;
+    animation-timing-function: ease-in;
+    animation-duration: 500ms;
+    opacity: 0;
+}
+
+.text-1-scrolled {
+    animation-name: fadeIn;
+    animation-timing-function: ease-in;
+    animation-duration: 500ms;
+    opacity: 1;
+}
+
+.explore-button-scrolled {
+    animation-name: fadeIn;
+    animation-timing-function: ease-in;
+    animation-duration: 500ms;
+    opacity: 1;
+}
+
+/* ----------Keyframes---------- */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 0;
+    }
+}

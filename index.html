@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Katei Ryori</title>
+    <title>Home - Katei Ryori</title>
 </head>
 <body id="body">
     <div id="nav" class="nav">
         <div class="nav-left">
-            <a href="" class="link-format">
+            <a href="/" class="link-format">
                 <div class="nav-item">
                     <p>Home</p>
                 </div>
@@ -19,11 +19,11 @@
                     <p>About</p>
                 </div>
             </a>
-            <a href="" class="link-format">
+            <a href="/menu.html" class="link-format">
                 <div class="nav-item">
                     <p>Menu</p>
                 </div>
-            </a>
+            <!-- </a> -->
             <a href="" class="link-format">
                 <div class="nav-item">
                     <p>Merch</p>
@@ -40,67 +40,14 @@
         <div id="logo-container" class="logo-container">
         </div>
         <div id="text-1" class="text-1">A Japanese culinary experience like no other</div>
-        <a href="#explore" id="explore-button" class="explore-button link-format">
+        <a href="/menu.html" id="explore-button" class="explore-button link-format">
             <span>Explore</span>
         </a>
-    </section>
-    <section id="sec-2" class="section-2">
-        <div class="menu-container"> 
-            <div class="menu-nav">
-                <a href="" class="link-format">
-                    <div class="menu-nav-item">Non-Alcoholic</div>
-                </a>
-                <a href="" class="link-format">
-                    <div class="menu-nav-item">Tea</div>
-                </a>
-                <a href="" class="link-format">
-                    <div class="menu-nav-item">Noodles</div>
-                </a>
-                <a href="" class="link-format">
-                    <div class="menu-nav-item">Meat Dishes</div>
-                </a>
-                <a href="" class="link-format">
-                    <div class="menu-nav-item">Desserts</div>
-                </a>
-                <a href="" class="link-format">
-                    <div class="menu-nav-item">Alcohol</div>
-                </a>
-            </div>
-            <div class="menu-overlay overlay-left"></div>
-            <div class="menu-overlay overlay-right"></div>
-        </div>
-        <div class="food-menu-container">
-            <div class="food-menu-item">
-                <img src="images/udon.jpg" alt="" class="food-item-image">
-                <p class="food-item-name">Udon</p>
-            </div>
-            <div class="food-menu-item">
-                <img src="images/sencha.jpg" alt="" class="food-item-image">
-                <p class="food-item-name">Sencha</p>
-            </div>
-            <div class="food-menu-item">
-                <img src="images/chashu.jpg" alt="" class="food-item-image">
-                <p class="food-item-name">Chashu</p>
-            </div>
-            <div class="food-menu-item">
-                <img src="images/melon-soda.jpg" alt="" class="food-item-image">
-                <p class="food-item-name">Melon Soda</p>
-            </div>
-            <div class="food-menu-item">
-                <img src="images/dorayaki.jpg" alt="" class="food-item-image">
-                <p class="food-item-name">Dorayaki</p>
-            </div>
-            <div class="food-menu-item">
-                <img src="images/sake.jpg" alt="" class="food-item-image">
-                <p class="food-item-name">Sake</p>
-            </div>
-        </div>
     </section>
 </body>
 </html>
 
 <script>
-    const body = document.getElementById("body");
     const logoContainer = document.getElementById("logo-container");
     const text1 = document.getElementById("text-1");
     const exploreBtn = document.getElementById("explore-button");
@@ -129,11 +76,11 @@
         }
     });
 
-    exploreBtn.addEventListener("click", function(){
-        window.scrollTo(0,0);
-        section1.classList.add('hide-visibility');
-        section2.classList.add("section-2-visible");
-    });
+    // exploreBtn.addEventListener("click", function(){
+    //     window.scrollTo(0,0);
+    //     section1.classList.add('hide-visibility');
+    //     // section2.classList.add("section-2-visible");
+    // });
 
 
 </script>

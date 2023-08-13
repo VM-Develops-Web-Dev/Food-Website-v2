@@ -3,8 +3,15 @@
 
 body {
     margin: 0;
-    height: 2000px;
     background-color: rgb(18, 18, 18);
+}
+
+.index-body{
+    height: 900px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 .section-1 {

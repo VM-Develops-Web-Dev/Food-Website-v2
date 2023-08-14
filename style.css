@@ -49,16 +49,22 @@ body::-webkit-scrollbar {
     
 }
 
-
 .nav-right {
     height: fit-content;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     padding: 10px 30px 10px 30px;
     border-radius: 40px;
 }
 
 .nav-right p{ 
     margin: 0;
+}
+
+.nav-right:hover{
+    border: 1px solid white;
+    transition: all;
+    animation: fadeIn;
+    transition-duration: 400ms;
 }
 
 .logo-container {

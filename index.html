@@ -3,40 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/ffa341cf64.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Home - Katei Ryori</title>
 </head>
 <body class="index-body">
-    <div id="nav" class="nav">
-        <div class="nav-left">
-            <a href="/" class="link-format selected-menu-item">
-                <div class="nav-item">
-                    <p>Home</p>
+    <div>
+        <div id="mobile-nav-container" class="fixed bg-[#121212] border-white rounded-r-2xl sm:w-[300px] md:hidden z-10 transition-[width] duration-300">
+            <div class=" text-white mt-5 pt-5 grid grid-cols-1 place-items-center w-full">
+                <div>
+                    <p>
+                        <i id="menu-open" class="fa-solid fa-bars fa-xl pl-10"></i>
+                    </p>
+                    <p>
+                        <i id="menu-close" class="fas fa-xmark fa-2xl hidden"></i>
+                    </p>
                 </div>
-            </a>
-            <a href="" class="link-format">
-                <div class="nav-item">
-                    <p>About</p>
+                <div id="mobile-nav-menu-items" class="text-2xl font-['Poppins'] pt-10 hidden">
+                    <a href="/">
+                        <div class="py-4 hover:underline duration-300 transition-[opacity]">Home</div>
+                    </a>
+                    <a href="/">
+                        <div class="py-4 hover:underline duration-300 transition-[opacity]">About</div>
+                    </a>
+                    <a href="menu.html">
+                        <div class="py-4 hover:underline duration-300 transition-[opacity]">Menu</div>
+                    </a>
+                    <a href="/">
+                        <div class="py-4 hover:underline duration-300 transition-[opacity]">Merch</div>
+                    </a>
                 </div>
-            </a>
-            <a href="menu.html" class="link-format">
-                <div class="nav-item">
-                    <p>Menu</p>
-                </div>
-            <!-- </a> -->
-            <a href="" class="link-format">
-                <div class="nav-item">
-                    <p>Merch</p>
-                </div>
-            </a>
-        </div>
-        <div id="nav-right" class="nav-right">
-            <a href="" class="link-format">
-                <p>Login</p>
-            </a>
+            </div>
         </div>
     </div>
     <section id="sec-1" class="section-1">
+        <div id="nav" class="nav hidden md:flex">
+            <div class="nav-left">
+                <a href="/" class="link-format selected-menu-item">
+                    <div class="nav-item">
+                        <p>Home</p>
+                    </div>
+                </a>
+                <a href="" class="link-format">
+                    <div class="nav-item">
+                        <p>About</p>
+                    </div>
+                </a>
+                <a href="menu.html" class="link-format">
+                    <div class="nav-item">
+                        <p>Menu</p>
+                    </div>
+                <!-- </a> -->
+                <a href="" class="link-format">
+                    <div class="nav-item">
+                        <p>Merch</p>
+                    </div>
+                </a>
+            </div>
+            <div id="nav-right" class="nav-right">
+                <a href="" class="link-format">
+                    <p>Login</p>
+                </a>
+            </div>
+        </div>
         <div id="logo-container" class="logo-container">
         </div>
         <div id="text-1" class="text-1">A Japanese culinary experience like no other</div>
@@ -53,6 +83,10 @@
     const exploreBtn = document.getElementById("explore-button");
     const section1 = document.getElementById("sec-1");
     const section2 = document.getElementById("sec-2");
+    const menuOpen = document.getElementById("menu-open");
+    const menuClose = document.getElementById("menu-close");
+    const mobileNavContainer = document.getElementById("mobile-nav-container");
+    const mobileNavItems = document.getElementById("mobile-nav-menu-items");
     
     window.addEventListener("scroll", function () {
         let top = window.scrollY;
@@ -81,6 +115,24 @@
     //     section1.classList.add('hide-visibility');
     //     // section2.classList.add("section-2-visible");
     // });
+
+    menuOpen.addEventListener('click', function() {
+        menuOpen.classList.toggle('hidden');
+        menuClose.classList.toggle('hidden');
+        mobileNavContainer.classList.toggle('h-full');
+        mobileNavContainer.classList.toggle('w-full');
+        mobileNavContainer.classList.toggle('border-r-2');
+        mobileNavItems.classList.toggle('hidden');
+    });
+
+    menuClose.addEventListener('click', function () {
+        menuOpen.classList.toggle('hidden');
+        menuClose.classList.toggle('hidden');
+        mobileNavContainer.classList.toggle('h-full');
+        mobileNavContainer.classList.toggle('w-full');
+        mobileNavContainer.classList.toggle('border-r-2');
+        mobileNavItems.classList.toggle('hidden');
+    });
 
 
 </script>

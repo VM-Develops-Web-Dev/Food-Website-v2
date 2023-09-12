@@ -2,7 +2,6 @@
 
 
 body {
-    margin: 0;
     background-color: rgb(18, 18, 18);
 }
 
@@ -99,7 +98,7 @@ body::-webkit-scrollbar {
     position: fixed;
     color: rgb(219, 219, 219);
     font-family: "Poppins";
-    font-size: xx-large;
+    font-size: clamp(20px, 2.5vw, 32px);
     opacity: 0;
     visibility: hidden;
     animation-name: fadeOut;
@@ -116,7 +115,7 @@ body::-webkit-scrollbar {
     color: rgb(239, 239, 239);
     font-family: "Poppins";
     font-weight: 400;
-    font-size: x-large;
+    font-size: clamp(16px, 2.5vw, 24px);
     letter-spacing: 1px;
     opacity: 0;
     visibility: hidden;
